@@ -1,5 +1,5 @@
 import reflex as rx
-
+import link_bio.styles.styles as styles
 
 def navbar()-> rx.Component:
     return rx.hstack(
@@ -9,8 +9,8 @@ def navbar()-> rx.Component:
             ),
             position="sticky",
             bg="yellow",
-            padding_x="15px",
-            padding_y="20px",
+            padding_x=styles.Size.DEFAULT,
+            padding_y=styles.Size.DEFAULT,
             z_index="999"
     )
     

@@ -1,9 +1,10 @@
 import reflex as rx
 from link_bio.components.link_button import link_button
-
+from link_bio.components.title import title
 
 def links() -> rx.Component:
     return rx.vstack(
+        title("Enlaces de interés"),
         link_button(
             "Mi insta!",
             "Como una de mis mayores aficiones: la fotografía",

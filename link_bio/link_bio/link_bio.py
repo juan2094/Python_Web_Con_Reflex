@@ -3,6 +3,7 @@ from link_bio.components.navbar import navbar
 from link_bio.components.footer import footer
 from link_bio.views.header.header import header
 from link_bio.views.links.links import links
+from link_bio.views.body.body_pic import body_pics
 import link_bio.styles.styles as styles
 
 
@@ -18,6 +19,7 @@ def index() -> rx.Component:
             rx.vstack( 
                 header(),
                 links(),
+                
                 max_width=styles.MAX_WIDTH,
                 margin_top=styles.Size.BIG.value,
                 margin_bottom=styles.Size.BIG.value,
@@ -25,6 +27,7 @@ def index() -> rx.Component:
                 width="100%"
             )
         ),
+        body_pics(),
         footer()
         
     )
