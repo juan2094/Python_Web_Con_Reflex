@@ -13,6 +13,8 @@ class Size(Enum):
     MEDIUM="0.8em"
     DEFAULT="1em"
     BIG="2em"
+    VIDEO_SIZE="50em"
+
 
 #Stilos
 
@@ -45,4 +47,10 @@ button_body_style = dict(
     font_size=Size.MEDIUM.value,
 )
 
+video_style=dict(
+     
+        widht=Size.VIDEO_SIZE,
+        height="auto",
+        aling="center"
+)
 
