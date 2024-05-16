@@ -33,7 +33,7 @@ def body_pics() -> rx.Component:
         ),
         
         
-        
+        margin_top=styles.Size.BIG.value,
         direction="column",
         align="center",
         width="100%"

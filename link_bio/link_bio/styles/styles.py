@@ -1,5 +1,6 @@
 import reflex as rx
 from enum import Enum
+from .colors import Color as Colors
 
 
 #Constantes
@@ -19,6 +20,8 @@ class Size(Enum):
 #Stilos
 
 BASE_STYLE = {
+    "background_color": Colors.BACKGROUND.value,
+
     rx.button: {
         "width": "100%",
         "height": "100%",
