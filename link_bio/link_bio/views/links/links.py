@@ -8,10 +8,18 @@ def links() -> rx.Component:
         link_button(
             "Mi insta!",
             "Como una de mis mayores aficiones: la fotografía",
+            "insta.svg",
             "https://www.instagram.com/juan_20_94"),
         link_button("Mi github!",
                     "Como mi profesión, el desarrollo.",
+                    "github.svg",
                     "https://github.com/juan2094"),
+
+        title("Contacto"),
+        link_button("Mi correo!",
+                    "Correo profesional.",
+                    "mail.svg",
+                    "mailto:juanantonio200594@gmail.com"),
         align="center",
         width="100%"
     )

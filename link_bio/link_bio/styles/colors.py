@@ -9,5 +9,5 @@ class Color(Enum):
 
 class TextColor(Enum):
     HEADER = "#F1F2F4"
-    BODY = "#FFFFFF"
+    BODY = "#dfdfdf"
     FOOTER = "#A3ABB2"

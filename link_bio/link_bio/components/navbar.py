@@ -6,11 +6,15 @@ from link_bio.styles.colors import TextColor as TextColors
 
 def navbar()-> rx.Component:
     return rx.hstack(
-        rx.hstack(rx.avatar(fallback="RR",color="#ffB400"),
+        rx.hstack(rx.avatar(fallback="RD",color="#ffB400"),
                   rx.flex(
-                        rx.text("Realiza, ",rx.text("desarrolla;",color=Colors.SECONDARY.value,high_contrast=True),color=TextColors.HEADER.value,high_contrast=True),    
-                        direction="row"
+                        rx.text("Realiza, ",color=TextColors.HEADER.value,high_contrast=True),
+                        rx.text("desarrolla;",color=Colors.SECONDARY.value),    
+                        direction="column",
+                        align="start",
+                        style=styles.navbar_title_style,
                     ),
+                    align="center"
                 ),
             position="fixed",
             bg=Colors.PRIMARY.value,

@@ -14,6 +14,7 @@ class Size(Enum):
     MEDIUM="0.8em"
     DEFAULT="1em"
     BIG="2em"
+    LARGE="3em"
     XBIG="10em"
     VIDEO_SIZE="50em"
 
@@ -33,13 +34,23 @@ BASE_STYLE = {
         "background_color": Colors.PRIMARY.value,
         "_hover": {
             "background_color": Colors.SECONDARY.value
-        }
+        },
+        "font_family" : "Rubik",
     },
     rx.link: {
         "text_decoration": "none",
         "_hover":{}
     }
 }
+
+
+navbar_title_style = dict(
+        font_family = "Rubik",
+        width="100%",
+        color=TextColors.HEADER.value,
+        font_size= Size.DEFAULT,
+)
+
 
 title_style = dict(
         
@@ -50,11 +61,12 @@ title_style = dict(
 
 button_tittle_style = dict(
     font_size=Size.DEFAULT.value,
-    color=TextColors.HEADER.value,
+     color=TextColors.HEADER.value,
 )
 
 button_body_style = dict(
     font_size=Size.MEDIUM.value,
+    color=TextColors.BODY.value,
 )
 
 video_style=dict(

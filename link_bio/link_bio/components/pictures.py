@@ -7,8 +7,9 @@ def pictures(text: str) -> rx.Component:
     return rx.image(
         src=text,
         alt=text,
-        width="15em",
+        width="auto",
         margin_x=styles.Size.BIG,
-        height="auto"
-       
+        margin_y=styles.Size.DEFAULT,
+        height="10em",
+        ratio=16/9,
     )

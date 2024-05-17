@@ -19,7 +19,7 @@ def index() -> rx.Component:
             rx.vstack( 
                 header(),
                 links(),
-                
+                padding=styles.Size.BIG,
                 max_width=styles.MAX_WIDTH,
                 margin_top=styles.Size.BIG.value,
                 margin_bottom=styles.Size.BIG.value,
@@ -44,7 +44,10 @@ def index() -> rx.Component:
 
 
 app = rx.App(
-    style=styles.BASE_STYLE
+    style=styles.BASE_STYLE,
+    stylesheets=[
+        "https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    ]
 )
 
 app.add_page(index,title="Mi portfolio en python web")
