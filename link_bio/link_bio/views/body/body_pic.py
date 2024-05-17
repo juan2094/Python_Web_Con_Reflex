@@ -3,6 +3,8 @@ from link_bio.components.pictures import pictures
 import link_bio.styles.styles as styles
 from link_bio.components.title import title
 from link_bio.components.video import video
+from link_bio.styles.colors import Color as Colors
+from link_bio.styles.colors import TextColor as TextColors
 
 def body_pics() -> rx.Component:
     return rx.vstack(
@@ -25,7 +27,7 @@ def body_pics() -> rx.Component:
         rx.hstack(
         title("Muestra de Videos"),
         ),
-        rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión"),
+        rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión",color = TextColors.BODY.value,),
         video("https://www.youtube.com/watch?v=HakHjHVnM24"),
         direction="column",
         align="center",

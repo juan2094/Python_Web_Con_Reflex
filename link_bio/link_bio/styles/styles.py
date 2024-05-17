@@ -1,7 +1,7 @@
 import reflex as rx
 from enum import Enum
 from .colors import Color as Colors
-
+from .colors import TextColor as TextColors
 
 #Constantes
 MAX_WIDTH = 800
@@ -14,6 +14,7 @@ class Size(Enum):
     MEDIUM="0.8em"
     DEFAULT="1em"
     BIG="2em"
+    XBIG="10em"
     VIDEO_SIZE="50em"
 
 
@@ -27,8 +28,12 @@ BASE_STYLE = {
         "height": "100%",
         "display": "block",
         "padding": Size.DEFAULT.value,
-        "border_radius": Size.DEFAULT.value
-        
+        "border_radius": Size.DEFAULT.value,
+        "color" : TextColors.BODY.value,
+        "background_color": Colors.PRIMARY.value,
+        "_hover": {
+            "background_color": Colors.SECONDARY.value
+        }
     },
     rx.link: {
         "text_decoration": "none",
@@ -39,11 +44,13 @@ BASE_STYLE = {
 title_style = dict(
         
         width="100%",
-        padding_top=Size.MEDIUM.value
+        padding_top=Size.MEDIUM.value,
+        color=TextColors.HEADER.value,
 )
 
 button_tittle_style = dict(
     font_size=Size.DEFAULT.value,
+    color=TextColors.HEADER.value,
 )
 
 button_body_style = dict(
@@ -54,6 +61,7 @@ video_style=dict(
      
         widht=Size.VIDEO_SIZE,
         height="auto",
-        aling="center"
+        aling="center",
+        color = TextColors.BODY.value,
 )
 

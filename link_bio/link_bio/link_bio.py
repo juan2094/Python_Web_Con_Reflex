@@ -28,7 +28,7 @@ def index() -> rx.Component:
             )
         ),
         body_pics(),
-        footer()
+        footer(),
         
     )
 
