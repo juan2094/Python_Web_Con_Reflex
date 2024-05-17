@@ -8,67 +8,49 @@ from link_bio.styles.colors import TextColor as TextColors
 
 def body_pics() -> rx.Component:
     return rx.vstack(
-        rx.tablet_and_desktop(
         rx.hstack(
         title("Muestra de fotografías"),
         ),
-        rx.hstack(
-            pictures("foto1.jpg"),
-            pictures("foto2.jpg"),
-            pictures("foto3.jpg"),
-            margin_y=styles.Size.DEFAULT,
-        ),
-        rx.hstack(
-            pictures("foto4.jpg"),
-            pictures("foto5.jpg"),
-            pictures("foto6.jpg"),
-            margin_y=styles.Size.DEFAULT,
-        ),
-        rx.vstack(
-        rx.hstack(
-        title("Muestra de Videos"),
-        ),
-        rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión",color = TextColors.BODY.value,),
-        video("https://www.youtube.com/watch?v=HakHjHVnM24",styles.Size.VIDEO_SIZE.value),
-        direction="column",
-        align="center",
-        width="100%"
-        ),
-        
-        ),
-        #para ver en movil
         rx.mobile_only(
-                rx.vstack(
-        title("Muestra de fotografías"),
-        align="center",
-        ),
             rx.vstack(
                 pictures("foto1.jpg"),
                 pictures("foto2.jpg"),
                 pictures("foto3.jpg"),
                 margin_y=styles.Size.DEFAULT,
-                 align="center",
             ),
             rx.vstack(
                 pictures("foto4.jpg"),
                 pictures("foto5.jpg"),
                 pictures("foto6.jpg"),
                 margin_y=styles.Size.DEFAULT,
-                 align="center",
             ),
-            rx.vstack(
-                rx.hstack(
-                    title("Muestra de Videos"),
-                ),
-                rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión",color = TextColors.BODY.value,),
-                video("https://www.youtube.com/watch?v=HakHjHVnM24",styles.Size.LARGE.value),
-                direction="column",
-                align="center",
-                width="100%"
-            ),
-         align="center",
         ),
-
+        rx.desktop_only(
+            rx.hstack(
+                pictures("foto1.jpg"),
+                pictures("foto2.jpg"),
+                pictures("foto3.jpg"),
+                margin_y=styles.Size.DEFAULT,
+            ),
+            rx.hstack(
+                pictures("foto4.jpg"),
+                pictures("foto5.jpg"),
+                pictures("foto6.jpg"),
+                margin_y=styles.Size.DEFAULT,
+            ),
+        ),
+        rx.vstack(
+        rx.hstack(
+        title("Muestra de Videos"),
+        ),
+        rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión",color = TextColors.BODY.value,),
+        video("https://www.youtube.com/watch?v=HakHjHVnM24"),
+        direction="column",
+        align="center",
+        width="100%"
+        ),
+        #SEGUIR HACIENDO RESPONSIVE, QUEDA EL VIDEO
+        
         margin_top=styles.Size.BIG.value,
         direction="column",
         align="center",
