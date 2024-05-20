@@ -9,8 +9,8 @@ import link_bio.styles.styles as styles
 
 
 
-class State(rx.State):
-    pass
+#class State(rx.State):
+#    pass
 
 def index() -> rx.Component:
     return  rx.box(
