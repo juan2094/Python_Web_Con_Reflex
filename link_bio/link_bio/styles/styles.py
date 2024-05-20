@@ -69,11 +69,16 @@ button_body_style = dict(
     color=TextColors.BODY.value,
 )
 
-video_style=dict(
-     
-        widht=Size.VIDEO_SIZE,
-        height="auto",
-        aling="center",
-        color = TextColors.BODY.value,
+video_style = dict(
+    width=Size.VIDEO_SIZE,
+    height="auto",
+    align="center",
+    backgroundColor=TextColors.BODY.value,  
 )
 
+video_mobile_style = dict(
+    width="5em",
+    height="auto",
+    align="center",
+ 
+)

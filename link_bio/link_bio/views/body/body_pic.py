@@ -3,7 +3,7 @@ from link_bio.components.pictures import pictures
 import link_bio.styles.styles as styles
 from link_bio.components.title import title
 from link_bio.components.video import video
-from link_bio.styles.colors import Color as Colors
+from link_bio.components.link_button import link_button
 from link_bio.styles.colors import TextColor as TextColors
 
 def body_pics() -> rx.Component:
@@ -17,12 +17,14 @@ def body_pics() -> rx.Component:
                 pictures("foto2.jpg"),
                 pictures("foto3.jpg"),
                 margin_y=styles.Size.DEFAULT,
+                align="center",
             ),
             rx.vstack(
                 pictures("foto4.jpg"),
                 pictures("foto5.jpg"),
                 pictures("foto6.jpg"),
                 margin_y=styles.Size.DEFAULT,
+                align="center",
             ),
         ),
         rx.desktop_only(
@@ -44,12 +46,17 @@ def body_pics() -> rx.Component:
         title("Muestra de Videos"),
         ),
         rx.text("Aquí un video de cuando grababa bodas antes de dedicarme grabar y emitir en televisión",color = TextColors.BODY.value,),
-        video("https://www.youtube.com/watch?v=HakHjHVnM24"),
+        rx.mobile_only(
+            link_button("Youtube","Click para ver el video en youtube.","youtube.svg","https://www.youtube.com/watch?v=HakHjHVnM24"),
+        ),
+        rx.desktop_only(
+            video("https://www.youtube.com/watch?v=HakHjHVnM24",False),
+        ),
         direction="column",
         align="center",
-        width="100%"
+        padding="2em"
         ),
-        #SEGUIR HACIENDO RESPONSIVE, QUEDA EL VIDEO
+        #pendiente de terminar el responsive del video
         
         margin_top=styles.Size.BIG.value,
         direction="column",
